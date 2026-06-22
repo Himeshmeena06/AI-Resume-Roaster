@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings - RoastMyResume AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html"><span class="logo">R</span><span>RoastMyResume AI</span></a><div class="nav-links"><a href="builder.html">Builder</a><a href="analyzer.html">Analyzer</a><a href="roast.html">Roast</a><a href="dashboard.html">Dashboard</a><a href="settings.html">Settings</a></div></div></nav>
+  <main class="app-shell"><div class="container">
+    <div class="page-title"><div><h1 style="font-size:44px">Settings</h1><p class="muted">Optional Gemini API integration. The app still works locally without a key.</p></div></div>
+    <section class="panel glass-pad stack" style="max-width:760px">
+      <div class="field"><label>Gemini API Key</label><input id="geminiKey" class="input" type="password" placeholder="AIza..."></div>
+      <div class="field"><label>Model</label><select id="model" class="select"><option value="gemini-1.5-flash">gemini-1.5-flash</option><option value="gemini-1.5-pro">gemini-1.5-pro</option></select></div>
+      <div class="field"><label>Feedback Tone</label><select id="tone" class="select"><option value="constructive">Constructive</option><option value="direct">Direct</option><option value="playful">Playful</option></select></div>
+      <button class="btn primary" id="saveSettings">Save Settings</button>
+      <div class="card"><h3>Storage Design</h3><p class="muted">Resume drafts, analysis results, Gemini settings, and trend history are stored in browser Local Storage under versioned keys. No backend is required for Vercel deployment.</p></div>
+    </section>
+  </div></main>
+  <script src="js/storage.js"></script><script src="js/app.js"></script><script src="js/settings.js"></script>
+</body>
+</html>

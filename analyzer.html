@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyzer - RoastMyResume AI</title>
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/analyzer.css">
+</head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html"><span class="logo">R</span><span>RoastMyResume AI</span></a><div class="nav-links"><a href="builder.html">Builder</a><a href="analyzer.html">Analyzer</a><a href="roast.html">Roast</a><a href="dashboard.html">Dashboard</a><a href="settings.html">Settings</a></div></div></nav>
+  <main class="app-shell">
+    <div class="container stack">
+      <div class="page-title"><div><h1 style="font-size:44px">Resume Analyzer</h1><p class="muted">Upload PDF/DOCX, paste text, or analyze your builder resume.</p></div><button class="btn primary" id="analyzeBtn">Analyze</button></div>
+      <div class="grid-2">
+        <section class="panel glass-pad stack">
+          <label class="upload-zone"><input id="fileInput" type="file" accept=".pdf,.docx,.txt" hidden><strong>Upload resume</strong><p class="muted">PDF, DOCX, or TXT. Text will appear below.</p></label>
+          <button class="btn" id="useBuilder">Use Builder Resume</button>
+          <div class="field"><label>Parsed Resume Content</label><textarea id="resumeText" class="textarea" style="min-height:260px"></textarea></div>
+          <div class="field"><label>Job Description Matcher</label><textarea id="jobText" class="textarea" placeholder="Paste a job description to calculate match percentage and missing keywords."></textarea></div>
+        </section>
+        <section class="panel glass-pad stack">
+          <div class="results-grid">
+            <div><canvas id="scoreChart"></canvas><h2 id="scoreText" style="text-align:center">--/100</h2></div>
+            <div class="stack" id="breakdown"></div>
+          </div>
+        </section>
+      </div>
+      <section class="grid-3" id="insights"></section>
+      <section class="panel glass-pad"><h2>Suggested Rewrites</h2><div class="stack" id="rewrites"></div></section>
+      <section class="panel glass-pad"><h2>Industry Comparison</h2><div class="comparison-bars" id="comparison"></div></section>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+  <script src="js/storage.js"></script><script src="js/app.js"></script><script src="js/analyzer.js"></script><script src="js/pdf.js"></script><script src="js/charts.js"></script><script src="js/analyzer-page.js"></script>
+</body>
+</html>

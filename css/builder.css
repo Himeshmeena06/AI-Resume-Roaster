@@ -1,0 +1,4 @@
+.section-editor { display: none; }
+.section-editor.active { display: grid; gap: 12px; }
+.repeat-row { display: grid; gap: 8px; padding: 12px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.04); }
+.preview-tools { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }

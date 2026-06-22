@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roast Center - RoastMyResume AI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="nav"><div class="container nav-inner"><a class="brand" href="index.html"><span class="logo">R</span><span>RoastMyResume AI</span></a><div class="nav-links"><a href="builder.html">Builder</a><a href="analyzer.html">Analyzer</a><a href="roast.html">Roast</a><a href="dashboard.html">Dashboard</a><a href="settings.html">Settings</a></div></div></nav>
+  <main class="app-shell">
+    <div class="container stack">
+      <div class="page-title"><div><h1 style="font-size:44px">Roast Center</h1><p class="muted">Humorous, constructive resume feedback with actionable fixes after every roast.</p></div><button class="btn primary" id="roastBtn">Generate Roast</button></div>
+      <div class="grid-2">
+        <section class="panel glass-pad stack">
+          <div class="field"><label>Roast Level</label><select id="roastLevel" class="select"><option>Friendly Roast</option><option>Recruiter Roast</option><option>FAANG Recruiter Roast</option><option>Brutal Roast</option><option>Reality Check Mode</option></select></div>
+          <div class="field"><label>Resume Text</label><textarea id="roastText" class="textarea" style="min-height:360px"></textarea></div>
+        </section>
+        <section class="panel glass-pad stack">
+          <span class="pill">No personal attacks. No hate. Just useful heat.</span>
+          <div id="roastOutput" class="roast-box">Choose a level and generate a roast.</div>
+          <div class="card"><h3>Actionable Fixes</h3><ul class="list" id="fixes"></ul></div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="js/storage.js"></script><script src="js/gemini.js"></script><script src="js/app.js"></script><script src="js/analyzer.js"></script><script src="js/roast.js"></script>
+</body>
+</html>
